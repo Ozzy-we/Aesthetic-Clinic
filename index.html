@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clinic</title>
+    <style type="text/css">
+        .main-container{
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px;
+            background-color: white;
+            
+        }
+        h1{
+            text-align: center;
+            color: #beaa79;
+            margin-left:3rem;
+        }
+        .navbar-search{
+            display:flex;
+        }
+        .searchicon{
+            display:block;
+            width:25px;
+            padding: 0;
+            margin: 20px auto;
+        
+        }
+        .searchbar::placeholder{
+            color:lightgray;
+            text-align: center;
+        }
+        .searchbar{
+            height:27px;
+            width:300px;
+            border-radius:1.9rem;
+            border:2px solid lightgray;
+            padding: 0;
+            margin: 20px auto;
+            
+        }
+        button[class ^= menuicon]:hover{
+            transform: scale(1.1);
+        }
+        .header_nav  {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            margin: 0;
+            transform: translateX(110%);
+            transition: all  0.3s ease-in-out;
+            
+        }
+        .header_nav ul li {
+            margin-right: 20px;
+            padding: 10px;
+        }
+        a {
+            text-decoration: none; 
+            color: black;
+            padding:10px 15px;
+            border-radius: 10px;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 20px auto;
+            justify-content: center;
+        }
+        .nav-ul ul li {
+            margin-right: 40px;
+            padding: 10px 20px;
+        }
+        
+        li{
+            list-style: none;
+            border-radius: 10px;
+
+        }
+        a:hover{
+            background-color: #C5B3A5ff;
+        }
+        a:focus{
+            background-color: #C5B3A5ff;
+        }
+
+        .menuicon{
+            display: none;
+            width:50px; 
+            background: transparent;
+            border: none;
+            transform: translateX(0);
+
+        }
+        
+        svg:hover{
+            background-color: #C5B3A5ff;
+        }
+        .img_container {
+            position: relative;
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        .img_container img {
+            width: 100%;
+            height: 550px;
+            display: block;
+        }
+        .btn-container {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            background-color: #beaa79;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            border: none;
+        }
+        .btn:hover {
+            background-color: grey;
+        }
+        .container1 {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .services {
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .services h2 {
+            margin-bottom: 20px;
+            color: #beaa79;
+        }
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .columns img {
+            width: 100%;
+            height: 278px;
+            object-fit: cover;
+            display: block; 
+            border-radius: 10px;
+        }
+        .nav-li{
+            display: none;
+
+        }
+        .nav-se{
+            display: none;
+            align-items: center;
+        }
+        .mobile-nav{
+            display:none;
+            flex-direction:column;
+            background-color: #CFCAC6ff;
+            justify-content: space-between;
+            padding: 30px;
+            border-radius: 16px;
+            position: absolute;
+            right:10px;
+            top: 20px;
+            z-index: 100;
+        }
+        .menuitem{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .backbutton{
+            width: 30px;
+        }
+        .hidden{
+            display: none;
+        }
+        .visible{
+            display: flex;
+        }
+        @media (max-width: 1264px){
+            .header-nav{
+                display:none;
+            }
+            .menuicon{
+                display:block;
+            }
+            
+            
+            .hidden{
+            display: none;
+            }
+            .nav-ul{
+                display: none;
+            }
+            .nav-li{
+                display:block;
+            }
+             
+        }
+        @media (max-width:682px){
+            .navbar-search{
+                display: none;
+            }
+            .nav-se{
+                display:flex;
+                
+            }
+            .searchicon{
+                margin-right: 2px;
+            }
+            .searchbar{
+                margin-left: 2px;
+
+                
+            }
+            
+        }
+        
+        
+        
+        
+            
+            
+        
+    </style>
+    
+</head>
+<body>
+
+   <div class="main-container">
+      <header>
+          <div class="left-container">
+            <h1>Aesthetic Clinic</h1>
+          </div>
+          <!-- <div class="navbar-search">
+            <img src="searchicon.png" class="searchicon">
+            <input type="search" class="searchbar" placeholder="Search here">
+          </div> -->
+          <div class="header-nav">
+              <ul>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Patient Portal</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Our Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Testimonials</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Profile</a>
+                  </li>
+                  <li class="nav-il nav-li" >
+                    <a href="#" class="nav-link">Home</a>
+                  </li>
+                  <li class="nav-il nav-li">
+                    <a href="/services.html" class="nav-link">Services</a>
+                  </li>           
+                  <li class="nav-il nav-li">
+                    <a href="#" class="nav-link">About</a>
+                  </li>
+                  <li class="nav-il nav-li">
+                    <a href="#" class="nav-link">Membership</a>
+                  </li>
+                  <li class="nav-il nav-li">
+                    <a href="#" class="nav-link">Page</a>
+                  </li>
+                  <li class="nav-il nav-li">
+                    <a href="#" class="nav-link">Blog&News</a>
+                  </li>
+                  <li class="nav-il nav-li">
+                    <a href="#" class="nav-link">Contact</a>
+                  </li>
+
+              </ul>
+          </div>
+          <div class="mobile-nav">
+            <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="backbutton">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+            </svg>
+              
+            <ul class="menuitem">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Patient Portal</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Our Services</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Profile</a>
+                </li>
+                <li class="nav-item " >
+                  <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Services</a>
+                </li>           
+                <li class="nav-item">
+                  <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Membership</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Page</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Blog&News</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+          <button class="menuicon">
+             
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            
+          </button>
+     </header>
+    
+     <hr>
+
+      <nav class="nav-ul">
+        <ul>
+            <li class="nav-il">
+                <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-il">
+                <a href="/services.html" class="nav-link">Services</a>
+            </li>           
+            <li class="nav-il">
+                <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-il">
+                <a href="#" class="nav-link">Membership</a>
+            </li>
+            <li class="nav-il">
+                <a href="#" class="nav-link">Page</a>
+            </li>
+            <li class="nav-il">
+                <a href="#" class="nav-link">Blog&News</a>
+            </li>
+            <li class="nav-il">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        
+      </nav>
+
+      <!-- <div class="navbar-search nav-se">
+        <img src="searchicon.png" class="searchicon">
+        <input type="search" class="searchbar" placeholder="Search here">
+      </div> -->
+      <div class="img_container">
+        
+        <img src="c.jpg" alt="Clinic Image">
+        <div class="btn-container">
+            <button class="btn" type="submit">Book Appointment</button>
+            <button class="btn" type="submit">Find Best Dermatologist</button>
+            <button class="btn" type="submit">Find Best Skincare Products</button>
+        </div>
+      </div> -->
+
+   
+     <div class="container1">
+        <h1>Better Skin Starts Here</h1>
+        <p>Our clinic offers the best aesthetic treatments designed to give you the results you desire with the care you deserve.</p>
+        <p>Step into our clinic and let us guide you to a fresher, brighter version of yourself.</p>
+     </div>
+
+    
+      <div class="services">
+        <h1>Our Specialities</h1>
+        <div class="columns">
+            <img src="medical.jpeg" alt="Medical">
+            <img src="cosmetic.jpg" alt="Cosmetic">
+            <img src="surgery.jpg" alt="Plastic">
+            <img src="skicare.jpg" alt="Skincare">
+        </div>
+        <div class="columns">
+            <h3>Medical</h3>
+            <h3>Cosmetic</h3>
+            <h3>Plastic Surgery</h3>
+            <h3>Skincare Products</h3>
+        </div>
+      </div>
+    </div>
+    <script src="index.js">
+
+    </script>
+</body>
+</html>

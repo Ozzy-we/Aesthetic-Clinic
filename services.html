@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clinic</title>
+    <style type="text/css">
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px;
+            background-color: white;
+            
+        }
+        h1{
+            text-align: center;
+            color: #beaa79;
+            margin-left:3rem;
+        }
+        .searchicon{
+            display:block;
+            width:30px;
+            padding: 0;
+            margin: 20px auto;
+        
+        }
+        .navbar-search{
+            display:flex;
+        }
+        .searchbar::placeholder{
+            color:lightgray;
+            text-align: center;
+        }
+        .searchbar{
+            height:27px;
+            width:100%;
+            border-radius:1.9rem;
+            border:2px solid lightgray;
+            padding: 0;
+            margin: 20px auto;
+            
+        }
+        .header_nav  {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            margin: 0;
+        }
+        .header_nav ul li {
+            margin-right: 20px;
+            padding: 10px;
+        }
+        a {
+            text-decoration: none; 
+            color: black;
+            padding:10px 15px;
+            border-radius: 10px;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 20px auto;
+            justify-content: center;
+        }
+        .nav-ul ul li {
+            margin-right: 40px;
+            padding: 10px 20px;
+        }
+        
+        li{
+            list-style: none;
+            border-radius: 10px;
+
+        }
+        a:hover{
+            background-color: #C5B3A5ff;
+        }
+        a:active{
+            background-color: #C5B3A5ff;
+        }
+        .img_container {
+            position: relative;
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        .img_container img {
+            width: 100%;
+            height: 550px;
+            display: block;
+        }
+        .btn-container {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            background-color: #beaa79;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            border: none;
+        }
+        .btn:hover {
+            background-color: grey;
+        }
+        .container1 {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .services {
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .services h2 {
+            margin-bottom: 20px;
+            color: #beaa79;
+        }
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .columns img {
+            width: 100%;
+            height: 278px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header>
+        <div class="left-container">
+            <h1>Aesthetic Clinic</h1>
+        </div>
+        <div class="navbar-search">
+            <img src="searchicon.png" class="searchicon">
+            <input type="search" class="searchbar" placeholder="Search here">
+        </div>
+        <div class="header_nav">
+            <ul>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Patient Portal</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Our Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Profile</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+    <hr>
+
+    <nav class="nav-ul">
+        <ul>
+            <li class="nav-il">
+                <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-il">
+                <a href="/services.html" class="nav-link">Services</a>
+            </li>           
+            <li class="nav-il">
+                <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-il">
+                <a href="#" class="nav-link">Membership</a>
+            </li>
+            <li class="nav-il">
+                <a href="#" class="nav-link">Page</a>
+            </li>
+            <li class="nav-il">
+                <a href="#" class="nav-link">Blog&News</a>
+            </li>
+            <li class="nav-il">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    
+    <h2>Services</h2>
+
+</body>
+</html>
